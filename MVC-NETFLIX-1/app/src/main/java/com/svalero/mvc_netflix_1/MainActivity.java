@@ -2,6 +2,8 @@ package com.svalero.mvc_netflix_1;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
         controller = new StudentController(model, view);
         //caso de uso -> getStudent
         controller.getStudent();
+
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(v -> {
+            //pasar datos de los campos de texto segun el contenido de los campos de texto
+            TextView name = (TextView) findViewById(R.id.editTextTextPersonName);
+            String nameStr = name.getText().toString();
+            TextView password = (TextView) findViewById(R.id.editTextTextPassword);
+            String passwordStr = password.getText().toString();
+            controller.updateStudent(nameStr, passwordStr);
+        });
     }
 
 

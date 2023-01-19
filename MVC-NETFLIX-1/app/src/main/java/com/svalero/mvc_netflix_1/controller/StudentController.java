@@ -19,4 +19,12 @@ public class StudentController {
        Student student = model.getStudentWS();
         view.printStudentDetails(student);
     }
+
+    public void updateStudent(String name, String password){
+        //threads -> retrofit 2
+        //iria a webservice rest y traeria los datos
+        Student student = model.getStudentWS();
+        student.setName(name);
+        student.setPassword(password);
+    }
 }

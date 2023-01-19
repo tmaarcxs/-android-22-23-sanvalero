@@ -7,8 +7,11 @@ public class StudentWS {
 
     public Student getStudentWS() {
         student = new Student();
-        student.setName("Perico");
+        String
+        //coger datos de la pantalla de login
+        student.setName(
         student.setSurname("Valero");
+        student.
         return student;
     }
 }
