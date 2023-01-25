@@ -72,7 +72,8 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.612"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        android:background="@drawable/efecto_btn" />
 
     <Button
         android:id="@+id/button3"
@@ -82,6 +83,36 @@
         android:text="Cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
+        android:background="@drawable/efecto_btn"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <Button
+        android:id="@+id/btnClaseAnonima"
+        android:layout_width="109dp"
+        android:layout_height="60dp"
+        android:text="clase anonima"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="14dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnImplements"
+        android:layout_width="108dp"
+        android:layout_height="58dp"
+        android:text="Implements"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnOnclick"
+        android:layout_width="94dp"
+        android:layout_height="55dp"
+        android:text="onclick"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="19dp"
+        android:onClick="onClick"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
