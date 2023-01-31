@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.svalero.mvp_netflix_1.presenter.LoginPresenter;
 import com.svalero.mvp_netflix_1.view.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
