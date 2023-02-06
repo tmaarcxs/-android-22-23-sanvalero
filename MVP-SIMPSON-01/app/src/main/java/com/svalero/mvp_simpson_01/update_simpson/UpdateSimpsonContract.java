@@ -1,10 +1,10 @@
-package com.svalero.mvp_simpson_01.lst_simpson;
+package com.svalero.mvp_simpson_01.update_simpson;
 
-import com.svalero.mvp_simpson_01.lst_simpson.model.pojo.Simpson;
+import com.svalero.mvp_simpson_01.update_simpson.model.pojo.Simpson;
 
 import java.util.ArrayList;
 
-public interface LstSimpsonContract {
+public interface UpdateSimpsonContract {
 
     interface View {
         void successLstSimpson(ArrayList<Simpson> lstSimpson);

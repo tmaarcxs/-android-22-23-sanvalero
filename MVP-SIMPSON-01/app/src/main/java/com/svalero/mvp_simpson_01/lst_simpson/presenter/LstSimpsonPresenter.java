@@ -8,9 +8,11 @@ import java.util.ArrayList;
 
 public class LstSimpsonPresenter implements LstSimpsonContract.Presenter {
     private LstSimpsonModel lstSimpsonModel;
+    private LstSimpsonContract.View view;
 
-    public LstSimpsonPresenter() {
+    public LstSimpsonPresenter(LstSimpsonContract.View view) {
         lstSimpsonModel = new LstSimpsonModel();
+        this.view = view;
     }
 
     @Override
@@ -18,12 +20,12 @@ public class LstSimpsonPresenter implements LstSimpsonContract.Presenter {
         lstSimpsonModel.lstSimpsonWS(null, new LstSimpsonContract.Model.OnLstSimpsonListener() {
             @Override
             public void onSuccess(ArrayList<Simpson> lstSimpson) {
-
+                view.successLstSimpson(lstSimpson);
             }
 
             @Override
             public void onFailure(String error) {
-
+                view.failureLstSimpson(error);
             }
         });
     }
