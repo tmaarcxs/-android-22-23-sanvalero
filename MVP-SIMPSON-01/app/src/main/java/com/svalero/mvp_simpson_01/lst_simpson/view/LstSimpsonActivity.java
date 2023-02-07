@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.svalero.mvp_simpson_01.R;
 import com.svalero.mvp_simpson_01.lst_simpson.LstSimpsonContract;
-import com.svalero.mvp_simpson_01.lst_simpson.model.pojo.Simpson;
+import com.svalero.mvp_simpson_01.entities.Simpson;
 import com.svalero.mvp_simpson_01.lst_simpson.presenter.LstSimpsonPresenter;
 
 import java.util.ArrayList;
@@ -42,6 +42,8 @@ public class LstSimpsonActivity extends AppCompatActivity implements LstSimpsonC
     @Override
     public void successLstSimpson(ArrayList<Simpson> lstSimpson) {
         //adapter notify data set changed
+
+        Toast toast = Toast.makeText(this, lstSimpson.get(0).toString(), Toast.LENGTH_SHORT);
     }
 
     @Override

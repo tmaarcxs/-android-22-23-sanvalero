@@ -1,8 +1,8 @@
 package com.svalero.mvp_simpson_01.lst_simpson.presenter;
 
+import com.svalero.mvp_simpson_01.entities.Simpson;
 import com.svalero.mvp_simpson_01.lst_simpson.LstSimpsonContract;
 import com.svalero.mvp_simpson_01.lst_simpson.model.LstSimpsonModel;
-import com.svalero.mvp_simpson_01.lst_simpson.model.pojo.Simpson;
 
 import java.util.ArrayList;
 
@@ -20,7 +20,11 @@ public class LstSimpsonPresenter implements LstSimpsonContract.Presenter {
         lstSimpsonModel.lstSimpsonWS(null, new LstSimpsonContract.Model.OnLstSimpsonListener() {
             @Override
             public void onSuccess(ArrayList<Simpson> lstSimpson) {
-                view.successLstSimpson(lstSimpson);
+                if (lstSimpson != null && lstSimpson.size() > 0) {
+                    view.successLstSimpson(lstSimpson);
+                } else {
+                    view.failureLstSimpson("No hay datos");
+                }
             }
 
             @Override
