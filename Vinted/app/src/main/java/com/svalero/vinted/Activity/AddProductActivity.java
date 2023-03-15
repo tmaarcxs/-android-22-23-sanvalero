@@ -1,9 +1,10 @@
-package com.svalero.vinted;
+package com.svalero.vinted.Activity;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.widget.Button;
+import com.svalero.vinted.R;
 
 public class AddProductActivity extends AppCompatActivity {
 

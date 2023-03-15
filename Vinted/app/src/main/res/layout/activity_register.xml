@@ -1,71 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".Activity.RegisterActivity"
+    android:background="#0ab1ba">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="#ffffff"
-        android:src="@drawable/addproduct"
+        android:layout_width="227dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="112dp"
+        android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/email"
         android:layout_width="270dp"
         android:layout_height="64dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Nombre de la prenda"
-        android:inputType="textPersonName"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/price"
+        android:id="@+id/username"
         android:layout_width="270dp"
         android:layout_height="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="Precio"
+        android:hint="Username"
         android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <EditText
-        android:id="@+id/description"
+        android:id="@+id/password"
         android:layout_width="270dp"
         android:layout_height="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="Descripción"
-        android:inputType="textPersonName"
-
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <Button
-        android:id="@+id/buttonSubirArticulo"
-        android:layout_width="169dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="44dp"
-        android:text="Subir"
+        android:id="@+id/btnRegister"
+        android:layout_width="249dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="80dp"
+        android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
-
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
